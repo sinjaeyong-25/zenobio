@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* ZENOBIO Brand Colors */
+  --color-brand: #D4699B;
+  --color-brand-dark: #B5507E;
+  --color-brand-light: #F5DCE9;
+  --color-navy: #1A1E3A;
+  --color-navy-light: #2D3461;
+  --color-sale: #E45858;
+  --color-bg: #FFFFFF;
+  --color-bg-subtle: #FAF9F8;
+  --color-border: #EBEBEB;
+  --color-text: #1A1A1A;
+  --color-text-muted: #888888;
+  --color-text-light: #BBBBBB;
+
+  --font-sans: "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    font-feature-settings: "kern" 1, "liga" 1;
+    word-break: keep-all;
+  }
+
+  h1, h2, h3 {
+    letter-spacing: -0.03em;
+    font-weight: 700;
+  }
+
+  h4, h5, h6 {
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .container-main {
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .container-main {
+      padding-inline: 2rem;
+    }
+  }
+
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
