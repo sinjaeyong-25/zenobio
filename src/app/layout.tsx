@@ -21,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="ko" className="h-full">
       <head>
+        <meta name="naver-site-verification" content="47214b4f07d178602384f316517fd12ed6bd0792" />
         {/* Pretendard — premium Korean variable font */}
         <link
           rel="stylesheet"
